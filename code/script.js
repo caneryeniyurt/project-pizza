@@ -40,27 +40,28 @@ switch(orderType) {
     orderType= prompt("Please re-enter a valid number.  1)Pizza, 2)Pasta, 3)Salad: ");
 };
 
+alert(` You have chosen ${selectedType[0]} Click "OK" to continue`);
 
-alert("Click `OK` to continue");
-
-let subOrderType = prompt(`Congratulate, we got your order. Since you ordered ${selectedType[0]}, today we can offer 
+// Step 3 - Subtype choice
+// Your code goes here
+let subOrderType = prompt(`Since you ordered ${selectedType[0]}, today we can offer 
  ${selectedType[1]}
  ${selectedType[2]} 
  ${selectedType[3]} 
  Which one would you like to order? `);
-
-
-
-
-
-
-
-
-// Step 3 - Subtype choice
-// Your code goes here
-
 // Step 4 - Age
 // Your code goes here
+const customerAge = prompt(`Your order is ${selectedType[0]}, please insert your age that we can understand your portion. `);
+
+if (customerAge>=18) {
+  alert(`You will get an adult portion size of ${selectedType[0]}. Click "OK" to continue.`);
+}
+else {
+  alert(`You will get a child portion size of ${selectedType[0]}. Click "OK" to continue.`);
+};
+
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
