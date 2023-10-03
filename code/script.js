@@ -49,15 +49,17 @@ let subOrderType = prompt(`Since you ordered ${selectedType[0]}, today we can of
  ${selectedType[2]} 
  ${selectedType[3]} 
  Which one would you like to order? `);
+
+ 
 // Step 4 - Age
 // Your code goes here
-const customerAge = prompt(`Your order is ${selectedType[0]}, please insert your age that we can understand your portion. `);
+const customerAge = prompt(`Your order is ${selectedType[subOrderType]}, please insert your age that we can understand your portion. `);
 
 if (customerAge>=18) {
-  alert(`You will get an adult portion size of ${selectedType[0]}. Click "OK" to continue.`);
+  alert(`You will get an adult portion size of ${selectedType[subOrderType]}. Click "OK" to continue.`);
 }
 else {
-  alert(`You will get a child portion size of ${selectedType[0]}. Click "OK" to continue.`);
+  alert(`You will get a child portion size of ${selectedType[subOrderType]}. Click "OK" to continue.`);
 };
 
 
@@ -65,3 +67,18 @@ else {
 
 // Step 5 - Order confirmation
 // Your code goes here
+const customerConfirm = prompt(`You have ordered ${selectedType[subOrderType]}, if you confirm please write "Confirm"`);
+
+if (customerConfirm=="Confirm") {
+  alert(`Dear ${customerName}, we got your order. You will get your ${selectedType[subOrderType]} in about ${selectedType[4]}. `);
+}
+else {
+  alert("Not this time unfortuntately! Thanks for choosing us, hope to see you in the future!");
+};
+
+
+
+
+
+
+
